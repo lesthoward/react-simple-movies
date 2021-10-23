@@ -1,0 +1,38 @@
+.tabBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid var(--line-through);
+}
+
+.tabBar__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: inherit;
+}
+
+.tabBar__text {
+    letter-spacing: 1px;
+}
+
+.tabBar__link {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    border-top: 1px solid transparent;
+    transition: all .1s ease;
+}
+
+.tabBar__link:hover,
+.tabBar__link:active {
+    border-color: var(--black-color);
+}
+
+@media screen and (min-width:768px){
+    .tabBar {
+        display: none;
+    }
+}

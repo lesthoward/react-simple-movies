@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+	/* All Colors */
+	--background-color: #fff;
+	--color-one: #2EC4B6;
+	--color-two: #ff6700;
+	--text-color-all: rgba(0, 0, 0, 0.6);
+	/* Font Sizes */
+	--font-size-all: 1.6rem;
+	/* Font Families */
+	--font-family-all: 'Zen Maru Gothic', Helvetica;
+	--font-family-abrupt: 'Fira Code', arial;
+	/* Other Varieties */
+	--line-through: rgba(0,0,0,.1);
+	--black-color: #000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width:768px){
+	:root {
+		--font-size-all: 1.4rem;
+	}
+}
+
+html {
+	font-size: 62.5%;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background: var(--background-color);
+	color: var(--text-color-all);
+	font-size: var(--font-size-all);
+	font-family: var(--font-family-all);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+input {
+	outline: none;
+	border: none;
+	color: var(--text-color-all);
+	font-size: var(--font-size-all);
+	font-family: var(--font-family-all);
+}
+
+a {
+	color: var(--text-color-all);
+	text-decoration: none;
+}
+
+.container {
+	max-width: 90%;
+	width: 1200px;
+	margin: auto;
+}
+
+.highlight-one {
+	color: var(--color-one);
+	font-weight: bold;
+	margin: 0 5px;
+	letter-spacing: 2px;
+}
+
+.highlight-two {
+	color: var(--color-two);
+	font-weight: bold;
+	margin: 0 5px;
+	letter-spacing: 2px;
 }

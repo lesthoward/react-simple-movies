@@ -1,0 +1,84 @@
+:root {
+    --header-height: 60px;
+}
+
+.existing-header {
+    height: var(--header-height);
+}
+
+header {
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: .5px solid var(--line-through);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* .logo::after {
+    content: 'TV';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    color: var(--color-one);
+    font-weight: bold;
+} */
+
+.logo__img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.logo__text {
+    text-transform: uppercase;
+    font-family: var(--font-family-abrupt);
+}
+
+.header__nav {
+    display: flex;
+    column-gap: 15px;
+    height: inherit;
+}
+
+.header__text {
+    text-transform: capitalize;
+}
+
+.header__link {
+    padding: 0 10px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: all .1s ease;
+}
+
+.header__link:hover {
+    border-color: var(--black-color);
+}
+
+@media screen and (max-width:768px){
+    header .container{ 
+        justify-content: center;
+    }
+
+    .header__nav {
+        display: none;
+    }   
+
+}
