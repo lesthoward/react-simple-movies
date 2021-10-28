@@ -12,6 +12,7 @@
 	/* Other Varieties */
 	--line-through: rgba(0,0,0,.1);
 	--black-color: #000;
+	--white-color: #fff;
 }
 
 @media screen and (max-width:768px){
@@ -76,4 +77,8 @@ a {
 	font-weight: bold;
 	margin: 0 5px;
 	letter-spacing: 2px;
+}
+
+.cursor {
+	cursor: pointer;
 }

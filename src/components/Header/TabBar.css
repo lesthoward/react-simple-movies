@@ -4,11 +4,12 @@
     width: 100%;
     height: 50px;
     border-top: 1px solid var(--line-through);
+    background: var(--white-color);
 }
 
 .tabBar__nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) 50px;
     height: inherit;
 }
 
@@ -29,6 +30,15 @@
 .tabBar__link:hover,
 .tabBar__link:active {
     border-color: var(--black-color);
+}
+
+.tabBar__nav--full {
+    grid-template-columns: 100%;
+}
+
+.tabBar__nav--full .header__link {
+    justify-content: center;
+    text-align: center;
 }
 
 @media screen and (min-width:768px){

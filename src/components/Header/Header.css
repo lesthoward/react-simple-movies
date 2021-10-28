@@ -8,6 +8,7 @@
 
 header {
     height: var(--header-height);
+    background: var(--white-color);
     position: fixed;
     top: 0;
     right: 0;
