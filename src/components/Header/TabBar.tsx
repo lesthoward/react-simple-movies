@@ -20,13 +20,13 @@ const TabBar = () => {
                     auth 
                     ? (
                         <nav className="tabBar__nav">
-                            <Link to="lanzamientos" className="header__text tabBar__link tabBar__text">
-                                Próximos Lanzamientos
-                            </Link>
-                            <Link to="recientes" className="header__text tabBar__link tabBar__text">
+                            <Link to="/estrenos" className="header__text tabBar__link tabBar__text">
                                 Estrenos
                             </Link>
-                            <Link to="perfil" className="header__text tabBar__link tabBar__text">
+                            <Link to="/populares" className="header__text tabBar__link tabBar__text">
+                                Lo más popular
+                            </Link>
+                            <Link to="/profile" className="header__text tabBar__link tabBar__text">
                                 Mi perfil
                             </Link>
                             <Link to="" className="header__text tabBar__link fas fa-door-open"

@@ -1,0 +1,13 @@
+.profile {
+    margin: 25px 0;  
+}
+
+.profile__title {
+    font-family: var(--font-family-abrupt);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+

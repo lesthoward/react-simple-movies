@@ -2,10 +2,11 @@
 	/* All Colors */
 	--background-color: #fff;
 	--color-one: #2EC4B6;
-	--color-two: #ff6700;
+	--color-two: #D72638;
 	--text-color-all: rgba(0, 0, 0, 0.6);
 	/* Font Sizes */
 	--font-size-all: 1.6rem;
+	--font-size-big: 2.4rem;
 	/* Font Families */
 	--font-family-all: 'Zen Maru Gothic', Helvetica;
 	--font-family-abrupt: 'Fira Code', arial;
@@ -23,6 +24,12 @@
 
 html {
 	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 img {
@@ -81,4 +88,26 @@ a {
 
 .cursor {
 	cursor: pointer;
+}
+
+/* Others */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.grid .movie {
+    width: auto;
+}
+
+@media screen and (max-width:468px){
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid .movie {
+        min-width: auto;
+    }
 }

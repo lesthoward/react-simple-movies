@@ -29,16 +29,19 @@ const Header = () => {
                         auth
                         ? (
                             <nav className="header__nav">
-                                <Link to="lanzamientos" className="header__text header__link">
-                                    Próximos <span className="highlight-one">Lanzamientos</span>
-                                </Link>
-                                <Link to="recientes" className="header__text header__link">
+                                {/* <Link to="lanzamientos" className="header__text header__link"> */}
+                                    {/* Próximos <span className="highlight-one">Lanzamientos</span> */}
+                                {/* </Link> */}
+                                <Link to="/estrenos" className="header__text header__link">
                                     Estrenos
                                 </Link>
-                                <Link to="populares" className="header__text header__link">
+                                <Link to="/populares" className="header__text header__link">
                                     Lo más popular
                                 </Link>
-                                <Link to="populares" className="header__text header__link fas fa-door-open"
+                                <Link to="/profile" className="header__text header__link">
+                                    Mi perfil
+                                </Link>
+                                <Link to="/" className="header__text header__link fas fa-door-open"
                                     onClick={login}
                                 >
                                 </Link>

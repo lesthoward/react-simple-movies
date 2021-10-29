@@ -1,0 +1,49 @@
+.SingleMovie{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 25px;
+}
+
+.SingleMovie__img {
+    width: 100%;
+}
+
+.SingleMovie__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.SingleMovie__text{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: var(--font-family-abrupt);
+}
+
+.SingleMovie__bold {
+    font-weight: 300;
+}
+
+.SingleMovie__events {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.SingleMovie__button{
+    background: var(--color-one);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.SingleMovie__button:hover {
+    transform: scale(1.1);
+}
+i {
+    margin-right: 15px;
+}

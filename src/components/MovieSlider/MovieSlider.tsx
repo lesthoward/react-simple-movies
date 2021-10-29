@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './MovieSlider.css'
 import axios from 'axios'
+import Movie from '../Movie/Movie';
 // import './Slider'
 const MovieSlider = () => {
     const [movies, setMovies] = useState<any>({})
@@ -38,9 +39,7 @@ const MovieSlider = () => {
             this.cursor = 0
             this.translateX = 0
             this.eachTime = 3000
-            this.interval = 0
             this.firstSteps()
-            this.gettingMoving()
         }
         firstSteps() {
             const movie: any = document.querySelector('.movie');
@@ -49,9 +48,6 @@ const MovieSlider = () => {
             const moviesWrapper: any = document.querySelector('.movies__wrapper');
             const moviesChildren: any = [...moviesWrapper.children]
             moviesChildren.map((movie: any) => moviesWrapper.appendChild(movie.cloneNode(true)))
-        }
-        gettingMoving() {
-            
         }
         moveNext() {
             const moviesWrapper: any = document.querySelector('.movies__wrapper');
@@ -84,24 +80,10 @@ const MovieSlider = () => {
                     {
                         movies?.results
                         ? movies.results.map((movie: any, index: number) => (
-                            <li className="movie" 
+                            <Movie
                                 key={movie.id}
-                            >
-                                <div className="movie__image">
-                                    <img src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title} className="movie__img" />
-                                </div>
-                                <div className="movie__info">
-                                    <p className="movie__text">{movie.title}</p>
-                                    <div className="score">
-                                        <div className="score__star"></div>
-                                        <div className="score__star"></div>
-                                        <div className="score__star"></div>
-                                        <div className="score__star"></div>
-                                        <div className="score__star"></div>
-                                        <div className="score__layer"></div>
-                                    </div>
-                                </div>
-                            </li>
+                                movie={movie}
+                            />
                         ))
                         : null
                     }
